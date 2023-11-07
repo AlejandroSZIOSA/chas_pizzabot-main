@@ -7,10 +7,18 @@
   <body>
     <p>Pizza Bot</p>
 
-    <form id="frm1" action="/action_page.php">
-      Your PIZZA: <input id="pizzaName" type="text" name="pname" /><br />
-      Quantity: <input type="number" name="qnumber" /><br /><br />
+    <form>
       <p id="result"></p>
+      Your PIZZA:
+      <input id="pizzaName" type="text" name="pname" required /><br />
+      Quantity:
+      <input
+        id="pizzaQuantity"
+        type="number"
+        name="qnumber"
+        required
+      /><br /><br />
+
       <input id="formBtn" type="button" value="Submit" />
     </form>
 
