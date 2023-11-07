@@ -5,15 +5,15 @@
     <title>Pizzabot</title>
   </head>
   <body>
-    <p>Enter names in the fields, then click "Submit" to submit the form:</p>
+    <p>Pizza Bot</p>
 
     <form id="frm1" action="/action_page.php">
-      First name: <input type="text" name="fname" /><br />
-      Last name: <input type="text" name="lname" /><br /><br />
-      <input type="button" onclick="myFunction()" value="Submit" />
+      Your PIZZA: <input id="pizzaName" type="text" name="pname" /><br />
+      Quantity: <input type="number" name="qnumber" /><br /><br />
+      <p id="result"></p>
+      <input id="formBtn" type="button" value="Submit" />
     </form>
 
     <script src="./pizzabot.js" charset="utf-8"></script>
-    Edit pizzabot.js to complete this assignment.
   </body>
 </html>

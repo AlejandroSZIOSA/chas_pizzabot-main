@@ -3,10 +3,15 @@ const hawaiian = "hawaiian";
 const pepperoni = "pepperoni";
 const PIZZA_PRICE = 80;
 
-alert(
+//DOM
+const inputPizzaName = document.getElementById("pizzaName");
+const formResult = document.getElementById("result");
+/* alert(
   `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`
-);
-let orderName = prompt("Enter the name of the pizza you want to order today?");
+); */
+/* let orderName = prompt("Enter the name of the pizza you want to order today?"); */
+
+let orderName = toString(inputPizzaName);
 
 if (checkOrderName(orderName.toLowerCase())) {
   let orderQuantity = prompt(`How many of ${orderName} do you want?`);
@@ -37,3 +42,9 @@ function cookingTime(orderQuantity) {
   else if (orderQuantity >= 3 && orderQuantity <= 5) return 15;
   else return 20;
 }
+
+formBtn.addEventListener("click", (e) => {
+  // parseFloat gör om från sträng till number
+  // tex "100" => 100
+  formResult.textContent = "test";
+});
