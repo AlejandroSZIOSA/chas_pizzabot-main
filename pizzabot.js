@@ -1,6 +1,7 @@
-const vegetarian = "vegetarian";
-const hawaiian = "hawaiian";
-const pepperoni = "pepperoni";
+//CONSTANTS
+const VEGETARIAN = "vegetarian";
+const HAWAIIAN = "hawaiian";
+const PEPPERONI = "pepperoni";
 const PIZZA_PRICE = 80;
 
 //DOM
@@ -8,13 +9,14 @@ const inputPizzaName = document.getElementById("pizzaName");
 const inputPizzaQuantity = document.getElementById("pizzaQuantity");
 const formResult = document.getElementById("result");
 
-formResult.textContent = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`;
+formResult.textContent = `Hey! Happy to serve your pizza. On our menu we have ${VEGETARIAN}, ${HAWAIIAN} and ${PEPPERONI}`;
 
+//FUNCTIONS
 function checkOrderName(orderName) {
   return (
-    orderName === vegetarian ||
-    orderName === hawaiian ||
-    orderName === pepperoni
+    orderName === VEGETARIAN ||
+    orderName === HAWAIIAN ||
+    orderName === PEPPERONI
   );
 }
 
@@ -29,9 +31,6 @@ function cookingTime(orderQuantity) {
 }
 
 formBtn.addEventListener("click", (e) => {
-  /* const orderName = inputPizzaName.value;
-const orderTotal = inputPizzaQuantity.value; */
-
   let orderName = inputPizzaName.value;
 
   if (checkOrderName(orderName.toLowerCase())) {
@@ -41,11 +40,5 @@ const orderTotal = inputPizzaQuantity.value; */
     formResult.textContent = `Great, I'll get started on your ${orderName} Pizza right away, it will cost ${orderTotal} kr. The pizzas will take ${cookingTime(
       orderQuantity
     )} minutes`;
-
-    /* alert(
-    `Great, I'll get started on your ${orderName} Pizza right away, it will cost ${orderTotal} kr. The pizzas will take ${cookingTime(
-      orderQuantity
-    )} minutes`
-  ); */
   } else formResult.textContent = "Pizza Doesn't exist!";
 });

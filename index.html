@@ -3,23 +3,61 @@
   <head>
     <meta charset="utf-8" />
     <title>Pizzabot</title>
-  </head>
-  <body>
-    <p>Pizza Bot</p>
+    <style>
+      p {
+        text-align: center;
+      }
+      #header {
+        font-size: x-large;
+        font-weight: bold;
+        font-style: oblique;
+        color: rgb(0, 50, 64);
+      }
+      #result {
+        font-size: large;
+        color: rgb(250, 94, 3);
+      }
+      #btnContainer {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+      }
+      fieldset {
+        padding: 10px;
+      }
+      .inputContainer {
+        padding: 5px;
+      }
 
+      #formBtn {
+        font-size: large;
+        background: rgb(0, 50, 64);
+        color: rgb(255, 88, 88);
+        padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p id="header">Pizza Bot</p>
+    <hr />
     <form>
       <p id="result"></p>
-      Your PIZZA:
-      <input id="pizzaName" type="text" name="pname" required /><br />
-      Quantity:
-      <input
-        id="pizzaQuantity"
-        type="number"
-        name="qnumber"
-        required
-      /><br /><br />
+      <fieldset>
+        <legend>Make your order here!</legend>
+        <div class="inputContainer">
+          <label> Your PIZZA: </label>
+          <input id="pizzaName" type="text" /><br />
+        </div>
+        <div class="inputContainer">
+          <label>Quantity:</label>
+          <input id="pizzaQuantity" type="number" /><br />
+        </div>
+      </fieldset>
 
-      <input id="formBtn" type="button" value="Submit" />
+      <div id="btnContainer">
+        <input id="formBtn" type="button" value="Submit Order" />
+      </div>
     </form>
 
     <script src="./pizzabot.js" charset="utf-8"></script>
